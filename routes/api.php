@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\SclassController;
 use App\Http\Controllers\Api\SubjectController;
+use App\Http\Controllers\Api\SectionController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -35,3 +36,12 @@ Route::post('/subject/store',[SubjectController::class, 'Store']);
 Route::get('/subject/edit/{id}',[SubjectController::class, 'Edit']);
 Route::put('/subject/update/{id}',[SubjectController::class, 'Update']);
 Route::delete('/subject/delete/{id}',[SubjectController::class, 'Delete']);
+
+
+//Section Route
+
+Route::get('/section',[SectionController::class, 'Index']);
+Route::post('/section/store',[SectionController::class, 'SectionStore']);
+Route::get('/section/edit/{id}',[SectionController::class, 'Edit']);
+Route::put('/section/update/{id}',[SectionController::class, 'Update']);
+Route::delete('/section/delete/{id}',[SectionController::class, 'Delete']);
